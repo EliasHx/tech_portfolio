@@ -1,3 +1,8 @@
+-- In this file, a dataset of over 1 million rows of data on air traffic
+-- of the United States (domestic and international) is manipulated to find out
+-- how many passenger travel to selected countries in Europe per year
+
+
 use us_intl_air_traffic;
 
 -- Airport Overview:
