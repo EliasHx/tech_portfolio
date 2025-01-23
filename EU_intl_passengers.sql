@@ -1,3 +1,6 @@
+-- This dataset shows train traffic across multiple European countries.
+-- In this file, the number of passengers between these countries is queried.
+
 USE eu_intl_passengers;
 
 SELECT *
