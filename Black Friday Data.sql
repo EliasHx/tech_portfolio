@@ -1,3 +1,8 @@
+-- The dataset includes furniture items from a website. The goal is to find out whether
+-- the customer reviews of an items have an impact on the percentage of the discount
+-- on Black Friday Sale. In this SQL file, the dataset is being manipulated with JOINS 
+-- to be able to execute further calculations in the respective jupyter notebook with Python
+
 USE H_Furniture;
 
 -- test product table
