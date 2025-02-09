@@ -2,9 +2,8 @@
 ## SESSION 2 ##
 ###############
 
-first_obj <- "Hello Data Pirate"
 library(readxl)
-my_germ <- read_excel("/Users/elias/Documents/HULT/Dual Degree/Term 2/Data Analysis with R/german credit card.xls")
+my_germ <- read_excel("path")
 summary(my_germ)
 
 # looking into "purpose" and "good_bad"
