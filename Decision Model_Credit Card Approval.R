@@ -1,7 +1,4 @@
-###############
-## SESSION 2 ##
-###############
-
+# importing excel file
 library(readxl)
 my_germ <- read_excel("path")
 summary(my_germ)
@@ -26,9 +23,6 @@ my_germ[ which(my_germ$good_bad == "bad") ,c("good_bad") ] <- "0"    # 0 is busi
 my_germ$good_bad <- as.numeric(my_germ$good_bad)
 
 
-###############
-## SESSION 3 ##
-###############
 
 # looking for descriptive statistics -- custom statistics
 cust_desc <- function(my_var){
@@ -70,38 +64,6 @@ cust_desc(my_var=my_germ$team2_score)
 cust_desc(my_var=my_germ$prof_score)
 
 
-# dice game
-dice_results <- c(3,4,4,3,6,3,3,1,5,1,1,4,5,5,3,2,1,6,6,4,5,2,4,5,4,6,6,6,6,3,6,6,5,1,6,3,5,2,2,1,3,3,1,1,1,2,3,1,2,6,1,3,4,6,5,5,1,4,6,5)
-mean(dice_results)
-
-# looking at different shapes of random variables
-dice <- sample(1:6, size=100000, replace=TRUE)
-mean(dice)
-hist(dice)
-
-# coin game
-coin <- sample(c(0,1), size=100000, replace=TRUE)
-mean(coin)
-hist(coin)
-
-
-###############
-## SESSION 4 ##
-###############
-
-# exponential distribution
-nyc <- rexp(n=100000, rate=0.5) #low lambda
-mean(nyc)
-hist(nyc)
-
-sfo <- rexp(n=100000, rate=3) #medium lambda
-mean(sfo)
-hist(sfo)
-
-jpn <- rexp(n=100000, rate=10) #high lambda
-mean(jpn)
-hist(jpn)
-
 #investigating all the different variables in deutsche bank
 my_germ <- as.data.frame(my_germ)
 for(i in 1:ncol(my_germ)){
@@ -136,12 +98,6 @@ my_germ$installp_norm <- normalize(my_var=my_germ$installp)
 my_germ$coapp_norm <- normalize(my_var=my_germ$coapp)
 my_germ$age_norm <- normalize(my_var=my_germ$age)
 my_germ$existcr_norm <- normalize(my_var=my_germ$existcr)
-
-
-
-###############
-## SESSION 5 ##
-###############
 
 
 # splitting into training and testing with random smapling
@@ -187,13 +143,6 @@ summary(my_logit_norm)
 ## TO CALCULATE HOW MUCH THE ODDS FOR BUSINESS SUCCESS CHANGE WITH 1 MORE UNIT
 
 
-
-
-###############
-## SESSION 6 ##
-###############
-
-
 # implementing the confusion matrix
 my_prediction <- predict(my_logit, my_germ_test, type="response")
 
@@ -219,13 +168,6 @@ tree_predict <- predict(my_tree, my_germ_test, type="prob")
 
 confusionMatrix( data= as.factor(as.numeric(tree_predict[,2]>0.5)) ,         # data is the test
                  reference= as.factor(as.numeric(my_germ_test$good_bad)) )   # reference is the original
-
-
-
-
-###############
-## SESSION 7 ##
-###############
 
 
 # comparing both models logit and tree on one framework
