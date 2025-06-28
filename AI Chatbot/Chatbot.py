@@ -1,16 +1,16 @@
 
 
 
-weaviate_url        = "https://3hye6kpspq1j4xwl9qcsg.c0.us-west3.gcp.weaviate.cloud"
-weaviate_api_key    = "l5ehhKdD7XmM5OYL2i2CkS2hLV7RuSNaFdHV"
+weaviate_url        = {link}
+weaviate_api_key    = {weviate_api_key}
 
 
 # Extract the configuration values - These are the only values you need to configure in the .json files
-huggingface_api_key = "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"
+huggingface_api_key = {huggingface_api_key}
 embedding_model     = "sentence-transformers/all-MiniLM-L6-v2"
 
 # Extract LLM settings - These are the only values you need to configure in the .json files
-openai_api_key  = "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"
+openai_api_key  = {openai_api_key}
 openai_model    = "gpt-4o"
 
 system_prompt   = """You are PixelProofys AI assistant, specializing in answering enterprise-related questions using the most relevant retrieved context. Your goal is to provide precise, well-structured, and professional responses based on the available context. If the provided context is insufficient, acknowledge it and avoid making assumptions. Always prioritize accuracy, clarity, and security when responding to sensitive topics.
